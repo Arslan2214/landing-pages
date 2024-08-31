@@ -26,7 +26,7 @@ const Navbar = () => {
         <Link href="/">
           <span className="flex items-center space-x-3">
             <span className="text-xl font-[500] uppercase">
-              Play<span className="bg-gradient-to-r from-blue-400 to-purple-500 px-2 py-1 ml-2 rounded-md">nft</span>
+              Play<span className="bg-pri px-2 py-1 ml-2 rounded-md">nft</span>
             </span>
           </span>
         </Link>
@@ -64,11 +64,11 @@ const Navbar = () => {
           } md:w-auto`}
           id="navbar-menu"
         >
-          <ul className="flex flex-col md:flex-row md:space-x-8">
+          <ul className="flex flex-col md:flex-row md:space-x-16">
             {navbarItems.map((item) => (
-              <li key={item.link}>
+              <li className="" key={item.link}>
                 <Link href={item.link}>
-                  <span className="block py-2 px-3 text-gray-300 hover:text-yellow">
+                  <span className="block py-1 text-gray-300 hover:text-yellow after:absolute after:bottom-0 after:left-0 relative after:w-0 hover:after:w-full after:h-[2px] after:content-[''] after:bg-gradient-to-r after:from-blue-400 after:to-purple-500 after:duration-500">
                     {item.text}
                   </span>
                 </Link>
@@ -78,8 +78,9 @@ const Navbar = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="hidden font-head lg:flex flex-col items-center">
-          <Link className="bg-gradient-to-r from-blue-400 to-purple-500 px-3 py-1 rounded-md" href='/create'>Create Now</Link>
+        <div className="hidden font-head lg:flex space-x-3 items-center">
+          <Link className="border-2 border-purple-400 px-3 py-1 rounded-md text-slate-100" href='/join'>Join Us</Link>
+          <Link className="bg-pri px-3 py-1 rounded-md" href='/create'>Create Now</Link>
         </div>
       </nav>
     </header>

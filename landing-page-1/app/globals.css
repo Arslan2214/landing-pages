@@ -25,3 +25,7 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.bg-pri {
+  @apply bg-gradient-to-r from-blue-400 to-purple-500
+}
