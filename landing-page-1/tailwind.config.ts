@@ -11,7 +11,14 @@ const config: Config = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "pri": "linear-gradient(to right, #60a5fa, #a78bfa)",
+      },
+      colors: {
+        'glass': 'rgba(255, 255, 255, 0.15)', // for glass effect
+      },
+      backdropBlur: {
+        'lg': '16px',
       },
     },
   },

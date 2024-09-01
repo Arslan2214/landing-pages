@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --bg-circle: 1000px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,8 +25,36 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    backdrop-filter: blur(2px);
 }
 
-.bg-pri {
-  @apply bg-gradient-to-r from-blue-400 to-purple-500
+
+.cont-block {
+  @apply container md:max-w-6xl lg:max-w-[88rem] mx-auto p-6 sm:p-12;
+}
+
+.glassy {
+  position: relative;
+  overflow: hidden; 
+}
+
+.glassy::before,
+.glassy::after {
+  content: '';
+  position: absolute;
+  width: var(--bg-circle);
+  height: var(--bg-circle);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.274), rgba(167, 139, 250, 0.4), transparent, transparent, transparent,transparent);
+  z-index: -10;
+}
+
+.glassy::before {
+  top: -3%;
+  left: calc(0px - var(--bg-circle) / 2);
+}
+
+.glassy::after {
+  bottom: -3%;
+  right: calc(0px - var(--bg-circle) / 2);
 }

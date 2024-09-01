@@ -79,8 +79,18 @@ const Navbar = () => {
 
         {/* Contact Info */}
         <div className="hidden font-head lg:flex space-x-3 items-center">
-          <Link className="border-2 border-purple-400 px-3 py-1 rounded-md text-slate-100" href='/join'>Join Us</Link>
-          <Link className="bg-pri px-3 py-1 rounded-md" href='/create'>Create Now</Link>
+          <Link
+            className="relative z-10 px-3 py-1 rounded-md text-slate-100 bg-rose-600
+             after:content-[''] after:absolute after:inset-0 after:bg-pri 
+             after:rounded-md after:-z-10 after:scale-105 after:transform"
+            href="/join"
+          >
+            Join Us
+          </Link>
+
+          <Link className="bg-pri px-3 py-1 rounded-md" href="/create">
+            Create Now
+          </Link>
         </div>
       </nav>
     </header>
